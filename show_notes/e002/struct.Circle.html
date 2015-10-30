@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='' width='100'></a>
         <p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e002</a></p><script>window.sidebarCurrent = {name: 'Circle', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -45,11 +45,11 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-131' class='srclink' href='../../src/show_notes/e002.rs.html#57-64' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-131' class='srclink' href='../../src/show_notes/e002.rs.html#64-71' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Circle {
-    pub x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
-    pub y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
-    pub r: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    pub x: <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    pub y: <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
+    pub r: <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>,
 }</pre><div class='docblock'><p>This struct is simple but useful to see how borrowing and moving work.</p>
 </div><h2 class='fields'>Fields</h2>
 <table><tr class='stab '>
@@ -62,9 +62,9 @@
 
 <p>This lets use demonstrate both how methods work in general and specifically
 how they interact with the idea of ownership.</p>
-</div><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(x: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, y: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, r: <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='struct' href='../../show_notes/e002/struct.Circle.html' title='show_notes::e002::Circle'>Circle</a></code></h4>
+</div><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(x: <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, y: <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, r: <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='struct' href='../../show_notes/e002/struct.Circle.html' title='show_notes::e002::Circle'>Circle</a></code></h4>
 <div class='docblock'><p>Creates a <code>Circle</code> instance centered on specified x, y values.</p>
-</div><h4 id='method.x_by_ref' class='method'><code>fn <a href='#method.x_by_ref' class='fnname'>x_by_ref</a>(&amp;self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+</div><h4 id='method.x_by_ref' class='method'><code>fn <a href='#method.x_by_ref' class='fnname'>x_by_ref</a>(&amp;self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
 <div class='docblock'><p>Returns the value of <code>Circle.x</code>, borrowing an immutable reference to
 the circle to do it.</p>
 
@@ -73,8 +73,8 @@ the circle to do it.</p>
 <span class='self'>self</span>.<span class='ident'>x</span> <span class='op'>=</span> <span class='number'>10</span>;</pre>
 
 <p>---the compiler would not allow it.</p>
-</div><h4 id='method.x_by_mut_ref' class='method'><code>fn <a href='#method.x_by_mut_ref' class='fnname'>x_by_mut_ref</a>(&amp;mut self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
-<h4 id='method.by_take' class='method'><code>fn <a href='#method.by_take' class='fnname'>by_take</a>(self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+</div><h4 id='method.x_by_mut_ref' class='method'><code>fn <a href='#method.x_by_mut_ref' class='fnname'>x_by_mut_ref</a>(&amp;mut self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+<h4 id='method.by_take' class='method'><code>fn <a href='#method.by_take' class='fnname'>by_take</a>(self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
 <div class='docblock'><p>Returns the value of <code>Circle.x</code>, taking ownership of the circle. As a
 result of the change in ownership, the circle goes out of scope after
 the method returns, so the circle instance will be inaccessible after
@@ -82,18 +82,20 @@ that.</p>
 
 <p>Note that the item is taken as immutable, so attempting to change the
 internals will still fail. <strong>Ownership is orthogonal to immutability.</strong></p>
-</div><h4 id='method.by_take_mut' class='method'><code>fn <a href='#method.by_take_mut' class='fnname'>by_take_mut</a>(self) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
+</div><h4 id='method.by_take_mut' class='method'><code>fn <a href='#method.by_take_mut' class='fnname'>by_take_mut</a>(self) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a></code></h4>
 <div class='docblock'><p>Returns the value of <code>Circle.x</code>, taking ownership of a mutable circle.</p>
-</div></div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../show_notes/e002/struct.Circle.html' title='show_notes::e002::Circle'>Circle</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='http://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='http://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='http://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../show_notes/e002/struct.Circle.html' title='show_notes::e002::Circle'>Circle</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
 </div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -110,7 +112,7 @@ internals will still fail. <strong>Ownership is orthogonal to immutability.</str
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -120,8 +122,8 @@ internals will still fail. <strong>Ownership is orthogonal to immutability.</str
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -130,7 +132,7 @@ internals will still fail. <strong>Ownership is orthogonal to immutability.</str
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 

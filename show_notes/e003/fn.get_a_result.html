@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='' width='100'></a>
         <p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e003</a></p><script>window.sidebarCurrent = {name: 'get_a_result', ty: 'fn', relpath: ''};</script><script defer src="sidebar-items.js"></script>
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -45,8 +45,8 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-1619' class='srclink' href='../../src/show_notes/e003.rs.html#240-247' title='goto source code'>[src]</a></span></h1>
-<pre class='rust fn'>pub fn get_a_result(succeeds: <a href='http://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='http://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</pre><div class='docblock'><p>Shows how to return either a meaningful result or an error as an enum.</p>
+        </span><a id='src-1619' class='srclink' href='../../src/show_notes/e003.rs.html#252-258' title='goto source code'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn get_a_result(succeeds: <a href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</pre><div class='docblock'><p>Shows how to return either a meaningful result or an error as an enum.</p>
 
 <p>The <code>Result</code> type is a standard pattern for handling cases where the result
 of a given function may be an error. No more of the C/C++ pattern of passing
@@ -58,10 +58,12 @@ handle it.</p>
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -78,7 +80,7 @@ handle it.</p>
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -88,8 +90,8 @@ handle it.</p>
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -98,7 +100,7 @@ handle it.</p>
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 

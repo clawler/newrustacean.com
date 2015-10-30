@@ -24,10 +24,10 @@
 
     
 
-    <section class="sidebar">
+    <nav class="sidebar">
         <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='' width='100'></a>
         
-    </section>
+    </nav>
 
     <nav class="sub">
         <form class="search-form js-only">
@@ -273,7 +273,7 @@
     <span class='doccomment'>/// Here is the year the show premiered.</span>
     <span class='kw'>pub</span> <span class='ident'>year</span>: <span class='ident'>i32</span>,
     <span class='doccomment'>/// Here is the director---but (s)he&#39;s rather shy and private.</span>
-    <span class='ident'>director</span>: <span class='ident'>String</span>
+    <span class='ident'>director</span>: <span class='ident'>String</span>,
 }
 
 <span class='doccomment'>/// You can also document the implementation. This is usually *not* going to be</span>
@@ -284,16 +284,14 @@
 <span class='kw'>impl</span> <span class='ident'>TVShow</span> {
     <span class='doccomment'>/// This documents a fairly ho-hum structure constructor.</span>
     <span class='doccomment'>///</span>
-    <span class='doccomment'>/// # Examples</span>
-    <span class='doccomment'>///</span>
-    <span class='doccomment'>/// ```rust</span>
+    <span class='doccomment'>/// ```ignore</span>
     <span class='doccomment'>/// let a_struct = TVShow::new(&quot;The Answer&quot;, 42, &quot;Joss Whedon&quot;);</span>
     <span class='doccomment'>/// ```</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>new</span>(<span class='ident'>theme</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>, <span class='ident'>year</span>: <span class='ident'>i32</span>, <span class='ident'>director</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>) <span class='op'>-&gt;</span> <span class='ident'>TVShow</span> {
         <span class='ident'>TVShow</span> {
             <span class='ident'>theme</span>: <span class='ident'>theme</span>.<span class='ident'>to_string</span>(),
             <span class='ident'>year</span>: <span class='ident'>year</span>,
-            <span class='ident'>director</span>: <span class='ident'>director</span>.<span class='ident'>to_string</span>()
+            <span class='ident'>director</span>: <span class='ident'>director</span>.<span class='ident'>to_string</span>(),
         }
     }
 }
@@ -307,7 +305,9 @@
 <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>use_members</span>() {
     <span class='kw'>let</span> <span class='ident'>firefly</span> <span class='op'>=</span> <span class='ident'>TVShow</span>::<span class='ident'>new</span>(<span class='string'>&quot;You can&#39;t take the sky from me!&quot;</span>, <span class='number'>2001</span>, <span class='string'>&quot;Joss Whedon&quot;</span>);
     <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;Firefly (come on, sing along: \&quot;{:?}\&quot;): {:?}/{:?}&quot;</span>,
-             <span class='ident'>firefly</span>.<span class='ident'>year</span>, <span class='ident'>firefly</span>.<span class='ident'>theme</span>, <span class='ident'>firefly</span>.<span class='ident'>director</span>);
+             <span class='ident'>firefly</span>.<span class='ident'>theme</span>,
+             <span class='ident'>firefly</span>.<span class='ident'>year</span>,
+             <span class='ident'>firefly</span>.<span class='ident'>director</span>);
 }
 </pre>
 </section>
@@ -315,10 +315,12 @@
 
     <section class="footer"></section>
 
-    <div id="help" class="hidden">
+    <aside id="help" class="hidden">
         <div>
+            <h1 class="hidden">Help</h1>
+
             <div class="shortcuts">
-                <h1>Keyboard Shortcuts</h1>
+                <h2>Keyboard Shortcuts</h2>
 
                 <dl>
                     <dt>?</dt>
@@ -335,7 +337,7 @@
             </div>
 
             <div class="infos">
-                <h1>Search Tricks</h1>
+                <h2>Search Tricks</h2>
 
                 <p>
                     Prefix searches with a type followed by a colon (e.g.
@@ -345,8 +347,8 @@
                 <p>
                     Accepted types are: <code>fn</code>, <code>mod</code>,
                     <code>struct</code>, <code>enum</code>,
-                    <code>trait</code>, <code>typedef</code> (or
-                    <code>tdef</code>).
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
                 </p>
 
                 <p>
@@ -355,7 +357,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    </aside>
 
     
 
