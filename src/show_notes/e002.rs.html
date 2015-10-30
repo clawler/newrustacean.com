@@ -307,8 +307,6 @@
 <span id="265">265</span>
 <span id="266">266</span>
 <span id="267">267</span>
-<span id="268">268</span>
-<span id="269">269</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! Something borrowed, something... moved?</span>
 <span class='doccomment'>//!</span>
@@ -479,9 +477,7 @@
     <span class='doccomment'>///</span>
     <span class='doccomment'>/// Because the reference is immutable, if you tried to do this---</span>
     <span class='doccomment'>///</span>
-    <span class='doccomment'>/// ```ignore</span>
-    <span class='doccomment'>/// self.x = 10;</span>
-    <span class='doccomment'>/// ```</span>
+    <span class='doccomment'>///     self.x = 10;</span>
     <span class='doccomment'>///</span>
     <span class='doccomment'>/// ---the compiler would not allow it.</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>x_by_ref</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>f64</span> {
