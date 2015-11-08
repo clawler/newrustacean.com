@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["e000","Hello, world!"],["e001","Document all the things!"],["e002","Something borrowed, something... moved?"],["e003","No More Nulls"],["e004","Functionalized"]]});
+initSidebarItems({"mod":[["e000","Hello, world!"],["e001","Document all the things!"],["e002","Something borrowed, something... moved?"],["e003","No More Nulls"],["e004","Functionalized"],["e005","Allocate it where?"]]});

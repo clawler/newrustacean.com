@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `demonstrate_method_ownership` fn in crate `show_notes`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, demonstrate_method_ownership">
+    <meta name="description" content="API documentation for the Rust `doubler_closure_factory` fn in crate `show_notes`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, doubler_closure_factory">
 
-    <title>show_notes::e002::demonstrate_method_ownership - Rust</title>
+    <title>show_notes::e005::doubler_closure_factory - Rust</title>
 
     <link rel="stylesheet" type="text/css" href="../../main.css">
 
@@ -26,7 +26,7 @@
 
     <nav class="sidebar">
         <a href='../../show_notes/index.html'><img src='http://newrustacean.com/podcast.png' alt='' width='100'></a>
-        <p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e002</a></p><script>window.sidebarCurrent = {name: 'demonstrate_method_ownership', ty: 'fn', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+        <p class='location'><a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e005</a></p><script>window.sidebarCurrent = {name: 'doubler_closure_factory', ty: 'fn', relpath: ''};</script><script defer src="sidebar-items.js"></script>
     </nav>
 
     <nav class="sub">
@@ -41,12 +41,18 @@
     </nav>
 
     <section id='main' class="content fn">
-<h1 class='fqn'><span class='in-band'>Function <a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e002</a>::<wbr><a class='fn' href=''>demonstrate_method_ownership</a></span><span class='out-of-band'><span id='render-detail'>
+<h1 class='fqn'><span class='in-band'>Function <a href='../index.html'>show_notes</a>::<wbr><a href='index.html'>e005</a>::<wbr><a class='fn' href=''>doubler_closure_factory</a></span><span class='out-of-band'><span id='render-detail'>
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-592' class='srclink' href='../../src/show_notes/e002.rs.html#212-269' title='goto source code'>[src]</a></span></h1>
-<pre class='rust fn'>pub fn demonstrate_method_ownership()</pre><div class='docblock'><p>Demonstrates how the same concepts apply when dealing with methods.</p>
+        </span><a id='src-2570' class='srclink' href='../../src/show_notes/e005.rs.html#87-91' title='goto source code'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn doubler_closure_factory() -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(<a href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;</pre><div class='docblock'><p>Creates a closure which doubles an integer.</p>
+
+<p>Compare with the function above: this is basically identical to
+<code>doubler_factory</code>, the only difference being that in this case, we return a
+closure rather than a standalone function. That has substantial
+ramifications for using closures and named functions, of course; refer to
+the discussion in <a href="/show_notes/e004/">e004</a> for details</p>
 </div></section>
     <section id='search' class="content hidden"></section>
 
