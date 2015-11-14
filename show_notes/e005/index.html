@@ -45,7 +45,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-2547' class='srclink' href='../../src/show_notes/e005.rs.html#1-137' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-2547' class='srclink' href='../../src/show_notes/e005.rs.html#1-157' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>Allocate it where?</p>
 
 <ul>
@@ -72,6 +72,25 @@ the basic form you use to return functions from other functions, and how to
 then use them in another function. You&#39;ll want to take a detailed look
 instead at the documentation for each (or just read the <a href="/src/show_notes/e005.rs.html">source</a>!),
 because that&#39;s where the meat of the discussion in this week&#39;s code is.</p>
+
+<h2 id="corrigenda" class='section-header'><a
+                           href="#corrigenda">Corrigenda</a></h2>
+<ul>
+<li><p>Steve Klabnik <a href="https://users.rust-lang.org/t/new-rustacean-podcast-e005-allocate-it-where-2015-11-08/3153/13?u=chriskrycho">pointed out</a> that my description of <code>Vector</code>
+types as totally heap-allocated was misleading. It&#39;s better to say that
+the <em>contents</em> of the <code>Vector</code> -- its data -- is heap-allocated, while
+the memory for the smart pointer and associated metadata are allocated
+on the stack. I had this in mind, and sort of alluded to it earlier in
+the discussion, but the way I actually said it was misleading at best.</p></li>
+<li><p>Chad Sharp (@crossroads1112 on GitHub) <a href="https://github.com/chriskrycho/newrustacean.com/issues/7">clarified</a> that in C99,
+C <em>does</em> support dynamic array allocation, though it became optional for
+compilers to implement it as of C11. I forgot about this because I spend
+so much of my time dealing with Visual C++, which does not support
+dynamic array allocation. (Notably, Visual C does; it is Visual C++
+which does not: remember, C and C++ are related but distinct languages.)</p></li>
+</ul>
+
+<p>Thanks to Steve and Chad for their helpful feedback!</p>
 
 <h1 id="links" class='section-header'><a
                            href="#links">Links</a></h1>
