@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["_1","Polyglot Programming Problems"]]});
+initSidebarItems({"mod":[["_1","Polyglot Programming Promises and Perils"]]});
